@@ -21,7 +21,7 @@
 # use select method to filter the authors for those who have contributed more than 2 articles
 # return contibuting_author(array of selected authors) that are uniq
 
-require_relative '/.article.rb'
+require_relative './article.rb'
 
 class Magazine
     attr_accessor :name , :category
