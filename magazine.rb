@@ -19,4 +19,21 @@
 # iterate through all of the articles and increment count
 # use group_by method to group articles by author name
 # use select method to filter the authors for those who have contributed more than 2 articles
-# return contibuting_author(array of selected authors) that are uniq
+# return contibuting_author(array of selected authors) that are uniqe 
+
+require_relative '/.article.rb'
+
+class Magazine
+    attr_accessor :name , :category
+    @@all = []
+    def initialize(name,category)
+        @name = name 
+        @category = category
+        @@all << self
+    end
+
+    def self.all 
+    end
+    
+
+end

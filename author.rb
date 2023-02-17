@@ -7,3 +7,6 @@
 # has add_article instance method that takes in two parameters, magazine and title
 # it takes i n a new Article instance the Author, magazine instance and a title that is a string
 # has topic_areas instance method that returns an array of af all the unique "category" attributes of the Magazine instances that this Author has written
+
+class author
+end
