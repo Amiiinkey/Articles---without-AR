@@ -19,7 +19,7 @@
 # iterate through all of the articles and increment count
 # use group_by method to group articles by author name
 # use select method to filter the authors for those who have contributed more than 2 articles
-# return contibuting_author(array of selected authors) that are uniqe 
+# return contibuting_author(array of selected authors) that are uniq
 
 require_relative '/.article.rb'
 
@@ -33,7 +33,23 @@ class Magazine
     end
 
     def self.all 
+        @@all
     end
-    
+
+    def contributors
+        Article.all.select {|article|article.magazine == self}.map {|article|article.author}
+    end
+
+    def self.find_by_name(name)
+        all.find {|magazine|magazine.name == name}
+    end
+
+    def article_titles
+        Article.all.select {|article|article.magazine == self}.map {|article|article.tittle}
+    end
+
+    def contributing_authors
+        contributors.group_by {|item| item.name}.select {|author_name, authors|authors.count>2}.values.flatten.uniq
+    end
 
 end
