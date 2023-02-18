@@ -26,17 +26,8 @@ class Author
     def articles 
         Article.all.select {|article|article.author == self}
     end
-
     def magazines
     end
 
-    def add_article(magazine,title)
-        Article.new[self,magazine,title]
-    end
-
-    def topic_areas
-        magazines.map do |magazine|
-            magazine.category
-    end.uniq
     
 end
