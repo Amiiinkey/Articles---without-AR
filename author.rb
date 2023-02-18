@@ -9,8 +9,8 @@
 # has topic_areas instance method that returns an array of af all the unique "category" attributes of the Magazine instances that this Author has written
 
 
-require_relative "./article.rb"
-require_relative "./magazine.rb"
+require_relative './article.rb'
+require_relative './magazine.rb'
 
 class Author
     attr_reader :name 
