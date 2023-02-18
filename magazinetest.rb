@@ -8,4 +8,4 @@ magazine3 = Magazine.new("clothes", "shop")
 
 magazine = Magazine.find_by_name("clothes")
 
-puts "#{magazine.name} is a #{magazine.category} magazine"
+puts "#{magazine.name} is a #{magazine.category} magazine
