@@ -45,7 +45,7 @@ class Magazine
     end
 
     def article_titles
-        Article.all.select {|article|article.magazine == self}.map {|article|article.tittle}
+        Article.all.select {|article|article.magazine == self}.map {|article|article.title}
     end
 
     def contributing_authors
