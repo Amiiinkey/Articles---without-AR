@@ -13,6 +13,7 @@ require_relative "./article.rb"
 require_relative "./magazine.rb"
 
 class Author
+    attr_reader :name 
     
 
 end
